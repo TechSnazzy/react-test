@@ -59,3 +59,11 @@ Once that's done, then you can go to work building your app. Once your app is bu
 ```
 npm run build
 ```
+
+To make copying the project folder easier, you can delete things like the build folder or node_modules folder. Then when you're ready to start working on your app again, simple run `npm install` such as this...
+
+```
+cd contact-manager
+npm install
+npm start
+```
