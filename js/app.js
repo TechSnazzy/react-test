@@ -121,3 +121,24 @@ const customer1 = new Customer('Kevin', 32, 300);
 console.log(customer1.info());
 
 // MODULES
+
+/*
+This example won't work. It's just to show the syntax
+of exporting and importing.
+*/
+
+// file 1 (file1.js)
+export const character = 'Spider-Man';
+export const colors = ['Red', 'Blue', 'Yellow'];
+
+/*
+Or let's say you have a Class within this file.
+You can just export default.
+*/
+export default Cat;
+
+// file 2 (file2.js)
+import { character, colors } from './file1.js';
+import Cat from './file1.js';
+
+console.log(character);
