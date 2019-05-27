@@ -56,20 +56,32 @@ console.log(newHuman);
 
 // DESTRUCTURING
 
-const profile = {
-  item1: 'John Doe',
-  item2: {
-    street: '40 Main Street',
-    city: 'Boston'
-  },
-  item3: ['movies', 'music']
+// Create the animal object
+const animal = {
+  species: 'dog',
+  weight: 27,
+  sound: 'woof'
 };
 
-const { item1, item2, item3 } = profile;
-const { street, city } = profile.item2;
+// Create the dogNeeds object by spreading the animal object to it first
+const dogNeeds = {
+  ...animal,
+  liquid: 'water',
+  solid: 'dog food'
+};
 
-console.log(item1, item2, item3[1]);
-console.log(street, city);
+/*
+Normally you could then assign properties to the variables such as this.
+var species = animal.species;
+var sound = animal.sound;
+
+But that involves too much typing.
+Instead, shorten the syntax by destructuring like this.
+*/
+
+const { species, sound, liquid } = dogNeeds;
+
+console.log('The ' + species + ' says ' + sound + ' and needs ' + liquid + '!');
 
 // CLASSES
 
